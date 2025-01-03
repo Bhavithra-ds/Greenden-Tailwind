@@ -10,7 +10,7 @@
     <!--header-->
     <nav class="bg-green-100 p-4 flex items-center justify-between shadow-xl">
         <h1 class="font-bold text-xl">GREENDEN</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="w-6 h-6 md:hidden" style="cursor: pointer;">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
        <ul class="flex gap-3 text-gray-600 hidden md:flex">
@@ -19,13 +19,24 @@
             <li><a class="hover:underline hover:text-black" href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <!--side navbar-->
+    <section id="sidenav" class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%; height: 100%; right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-5 text-gray-600 items-center ">
+            <li><a class="hover:underline hover:text-black" href="index.html">Home</a></li>
+            <li><a class="hover:underline hover:text-black" href="product.html">Product</a></li>
+            <li><a class="hover:underline hover:text-black" href="contact.html">Contact</a></li>
+        </ul>
+    </section>
     <!--our product section-->
     <div class="text-center">
         <h1 class="font-bold text-2xl m-5 ">Our products</h1>
-        <input type="text" placeholder="Search for a product.." class="border border-black" style="width: 70%;"> 
+        <input id="search" type="text" placeholder="Search for a product.." class="border border-black" style="width: 70%;"> 
     </div>
     <!--Image section-->
-    <div class="p-4 mt-2 grid grid-cols-2 md:grid-cols-4 text-center ">
+    <div id="product-container" class="p-4 mt-2 grid grid-cols-2 md:grid-cols-4 text-center ">
         <div class="mb-2">
             <img src="./img/p3.png" alt="" class="inline mb-2 hover:shadow-2xl transform hover:-translate-y-2">
             <h3>Snake Plant</h3>
@@ -93,17 +104,6 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, delectus. </p>
         <p>@2021 Greenday.com</p>
     </div>
-
+ <script src="product.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
